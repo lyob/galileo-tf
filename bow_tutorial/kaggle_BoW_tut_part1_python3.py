@@ -87,6 +87,7 @@ forest = forest.fit( train_data_features, train["sentiment"] )
 # Now it's time to test the test data. Downloaded testData.tsv from the website. Our task is to predict the sentiment label.
 test = pd.read_csv("testData.tsv", header=0, delimiter="\t", \
                    quoting=3 )
+num_reviews = len(test["review"])
 clean_test_reviews = []
 print("Cleaning and parsing the test set movie reviews...\n")
 for i in range(0,num_reviews):
