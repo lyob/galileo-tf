@@ -89,7 +89,7 @@ test = pd.read_csv("testData.tsv", header=0, delimiter="\t", \
                    quoting=3 )
 clean_test_reviews = []
 print("Cleaning and parsing the test set movie reviews...\n")
-for i in xrange(0,num_reviews):
+for i in range(0,num_reviews):
     if( (i+1) % 1000 == 0 ):
         print("Review %d of %d\n" % (i+1, num_reviews))
     clean_review = review_to_words( test["review"][i] )
